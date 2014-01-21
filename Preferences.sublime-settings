@@ -12,14 +12,15 @@
 	"ignored_packages":
 	[
 		"Vintage",
+		"C++",
 		"Python",
-		"Emmet",
 		"Perl",
 		"PHP",
-		"C++",
 		"CSS",
+		"Emmet",
 		"Batch File",
-		"JavaScript"
+		"JavaScript",
+		"Vintageous"
 	],
 	"trim_automatic_white_space": false,
 	"word_wrap": false
