@@ -2,29 +2,22 @@
 	// Prevent Emmet from overwriting these
 	{ "keys": ["ctrl+alt+shift+'"], "command": "change_quotes" },
 	
-	
 	// { "keys": ["ctrl+alt+shift+."], "command": "insert_snippet", "args": {"contents": "```livescript\n${SELECTION}$0\n```"}},
 	
-	{ "keys": ["ctrl+alt+shift+l", "ctrl+alt+shift+l"], "command": "insert_snippet", "args": {"contents": "console.log(${SELECTION}$0);"},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+l"]	, "command": "insert_snippet", "args": {"contents": "console.log(${SELECTION}$0);"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+i"]	, "command": "insert_snippet", "args": {"contents": "console.info(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+w"]	, "command": "insert_snippet", "args": {"contents": "console.warn(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+t"]	, "command": "insert_snippet", "args": {"contents": "console.trace();"}					, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+b"]	, "command": "insert_snippet", "args": {"contents": "debugger;"}						, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	
-	{ "keys": ["ctrl+alt+shift+l", "ctrl+alt+shift+w"], "command": "insert_snippet", "args": {"contents": "console.warn(${SELECTION}$0);"},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+d"]	, "command": "insert_snippet", "args": {"contents": "logging.debug(${SELECTION}$0)"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
+	{ "keys": ["alt+l", "alt+i"]	, "command": "insert_snippet", "args": {"contents": "logging.info(${SELECTION}$0)"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
+	{ "keys": ["alt+l", "alt+w"]	, "command": "insert_snippet", "args": {"contents": "logging.warn(${SELECTION}$0)"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
+	{ "keys": ["alt+l", "alt+e"]	, "command": "insert_snippet", "args": {"contents": "logging.error(${SELECTION}$0)"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
+	{ "keys": ["alt+l", "alt+l"]	, "command": "insert_snippet", "args": {"contents": "logging.critical(${SELECTION}$0)"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
+	{ "keys": ["alt+l", "alt+b"]	, "command": "insert_snippet", "args": {"contents": "import pdb; pdb.set_trace()"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
 	
-	{ "keys": ["ctrl+alt+shift+l", "ctrl+alt+shift+d"], "command": "insert_snippet", "args": {"contents": "console.debug(${SELECTION}$0);"},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
-	
-	{ "keys": ["ctrl+alt+shift+l", "ctrl+alt+shift+t"], "command": "insert_snippet", "args": {"contents": "console.trace();"},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
-	
-	
-	{ "keys": ["ctrl+alt+shift+l"], "command": "insert_snippet", "args": {"contents": "logging.critical(${SELECTION}$0)"},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
-	
-	{ "keys": ["ctrl+alt+shift+p"], "command": "insert_snippet", "args": {"contents": "import pdb; pdb.set_trace()"},
-		"context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
-	
-	{ "keys": ["ctrl+alt+shift+s"], "command": "insert_snippet", "args": {"contents": "{% T '${SELECTION}' %}$0"} },
+	{ "keys": ["ctrl+alt+shift+s"]	, "command": "insert_snippet", "args": {"contents": "{% T '${SELECTION}' %}$0"} },
 	
 	// { "keys": ["ctrl+alt+shift+z"], "command": "sass_nest"},
 ]
