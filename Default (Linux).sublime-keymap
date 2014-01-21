@@ -21,8 +21,5 @@
 	
 	// { "keys": ["ctrl+alt+shift+z"], "command": "sass_nest"},
 	
-	{ "keys": ["ctrl+k", "ctrl+o"], "command": "toggle_vintageous", "context": [{"key": "panel_visible", "operand": false}] }
+	{ "keys": ["ctrl+k", "ctrl+o"], "command": "toggle_vintageous" }
 ]
-
-
-
