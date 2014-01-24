@@ -1,7 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Sunburst.tmTheme",
+	"color_scheme": "Packages/User/Sunburst (SL).tmTheme",
 	"drag_text": true,
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
@@ -11,16 +11,16 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"C++",
-		"Python",
 		"Perl",
 		"PHP",
-		"CSS",
 		"Emmet",
-		"Batch File",
+		"Vintageous",
+		"Vintage",
 		"JavaScript",
-		"Vintageous"
+		"C++",
+		"Batch File",
+		"CSS",
+		"Python"
 	],
 	"trim_automatic_white_space": false,
 	"word_wrap": false
