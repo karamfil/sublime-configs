@@ -11,16 +11,16 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Perl",
-		"PHP",
 		"Emmet",
-		"Vintageous",
-		"Vintage",
-		"JavaScript",
-		"C++",
+		"Python",
+		"Perl",
 		"Batch File",
 		"CSS",
-		"Python"
+		"Vintage",
+		"C++",
+		"JavaScript",
+		"Vintageous",
+		"PHP"
 	],
 	"trim_automatic_white_space": false,
 	"word_wrap": false
