@@ -1,0 +1,46 @@
+{
+	"history":
+	[
+		{
+			"data":
+			{
+				"args":
+				{
+					"current": "1",
+					"padding": "1",
+					"step": "1"
+				},
+				"command": "insert_nums",
+				"text": "\\i"
+			},
+			"key": "1bd7ee1ce72751da4e64129f6d32db41",
+			"label": "\\i"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"current": "0",
+					"padding": "1",
+					"step": "1"
+				},
+				"command": "insert_nums",
+				"text": "\\i0"
+			},
+			"key": "2b698f4de9b83fa9de1b60d21eef2340",
+			"label": "\\i0"
+		}
+	],
+	"last_command":
+	{
+		"args":
+		{
+			"current": "0",
+			"padding": "1",
+			"step": "1"
+		},
+		"command": "insert_nums",
+		"text": "\\i0"
+	}
+}
