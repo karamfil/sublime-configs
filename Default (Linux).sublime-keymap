@@ -1,6 +1,6 @@
 [
-	// Prevent Emmet from overwriting these
-	{ "keys": ["ctrl+alt+shift+'"], "command": "change_quotes" },
+	{ "keys": ["super+f12"], "command": "reindent", "args": { "single_line": false }},
+	{ "keys": ["super+alt+f12"], "command": "reopen", "args": {"encoding": "Cyrillic (Windows 1251)" } },
 	
 	// { "keys": ["ctrl+alt+shift+."], "command": "insert_snippet", "args": {"contents": "```livescript\n${SELECTION}$0\n```"}},
 	
@@ -8,18 +8,97 @@
 	{ "keys": ["alt+l", "alt+i"]	, "command": "insert_snippet", "args": {"contents": "console.info(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	{ "keys": ["alt+l", "alt+w"]	, "command": "insert_snippet", "args": {"contents": "console.warn(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	{ "keys": ["alt+l", "alt+t"]	, "command": "insert_snippet", "args": {"contents": "console.trace();"}					, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+a"]	, "command": "insert_snippet", "args": {"contents": "alert(${SELECTION}$0);"}			, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	{ "keys": ["alt+l", "alt+b"]	, "command": "insert_snippet", "args": {"contents": "debugger;"}						, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	
+	{ "keys": ["alt+l", "alt+l"]	, "command": "insert_snippet", "args": {"contents": "console.log ${SELECTION}$0"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.livescript" }]},
+	{ "keys": ["alt+l", "alt+i"]	, "command": "insert_snippet", "args": {"contents": "console.info ${SELECTION}$0"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.livescript" }]},
+	{ "keys": ["alt+l", "alt+w"]	, "command": "insert_snippet", "args": {"contents": "console.warn ${SELECTION}$0"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.livescript" }]},
+	{ "keys": ["alt+l", "alt+t"]	, "command": "insert_snippet", "args": {"contents": "console.trace();"}					, "context": [{ "key": "selector", "operator": "equal", "operand": "source.livescript" }]},
+	{ "keys": ["alt+l", "alt+a"]	, "command": "insert_snippet", "args": {"contents": "alert ${SELECTION}$0"}				, "context": [{ "key": "selector", "operator": "equal", "operand": "source.livescript" }]},
+	{ "keys": ["alt+l", "alt+b"]	, "command": "insert_snippet", "args": {"contents": "debugger;"}						, "context": [{ "key": "selector", "operator": "equal", "operand": "source.livescript" }]},
 	
 	{ "keys": ["alt+l", "alt+d"]	, "command": "insert_snippet", "args": {"contents": "logging.debug(${SELECTION}$0)"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
 	{ "keys": ["alt+l", "alt+i"]	, "command": "insert_snippet", "args": {"contents": "logging.info(${SELECTION}$0)"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
 	{ "keys": ["alt+l", "alt+w"]	, "command": "insert_snippet", "args": {"contents": "logging.warn(${SELECTION}$0)"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
 	{ "keys": ["alt+l", "alt+e"]	, "command": "insert_snippet", "args": {"contents": "logging.error(${SELECTION}$0)"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
 	{ "keys": ["alt+l", "alt+l"]	, "command": "insert_snippet", "args": {"contents": "logging.critical(${SELECTION}$0)"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
+	{ "keys": ["alt+l", "alt+x"]	, "command": "insert_snippet", "args": {"contents": "logging.exception(${SELECTION}$0)"}, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
 	{ "keys": ["alt+l", "alt+b"]	, "command": "insert_snippet", "args": {"contents": "import pdb; pdb.set_trace()"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]},
 	
-	{ "keys": ["ctrl+alt+shift+s"]	, "command": "insert_snippet", "args": {"contents": "{% T '${SELECTION}' %}$0"} },
+	{ "keys": ["alt+l", "alt+l"]	, "command": "insert_snippet", "args": {"contents": "d(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.php" }]},
+	{ "keys": ["alt+l", "alt+e"]	, "command": "insert_snippet", "args": {"contents": "de(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.php" }]},
+	
+	
+	{ "keys": ["ctrl+alt+shift+s"], "command": "insert_snippet", "args": {"contents": "{% trans '${SELECTION}' %}$0"} },
+	{ "keys": ["ctrl+super+shift+s"], "command": "insert_snippet", "args": {"contents": "{% blocktrans${0: with } %}${SELECTION}{% endblocktrans %}"} },
 	
 	// { "keys": ["ctrl+alt+shift+z"], "command": "sass_nest"},
 	
+	
+	// ******************************
+	// ***** BRACKET HIGHLIHTER *****
+	// ******************************
+	// Base
+	{"keys": ["super+`"], "command": "wrap_brackets"},
+	{"keys": ["super+ctrl+`"], "command": "swap_brackets"},
+	{"keys": ["super+alt+`"], "command": "bh_remove_brackets"},
+	{"keys": ["super+v"], "command": "bh_toggle_high_visibility"},
+	{"keys": ["super+["], "command": "bh_key", "args": {"plugin": {"type": ["__all__"], "command" : "bh_modules.foldbracket"} } },
+	{"keys": ["super+]"], "command": "bh_key", "args": {"plugin": {"type": ["__all__"], "command" : "bh_modules.foldbracket"} } },
+	
+	// Go to left/right bracket
+	{"keys": ["super+left"], "command": "bh_key", "args": {"no_outside_adj": null, "no_block_mode": null, "lines" : true, "plugin": {"type": ["__all__"], "command": "bh_modules.bracketselect", "args": {"select": "left"} } } },
+	{"keys": ["super+right"], "command": "bh_key", "args": {"no_outside_adj": null, "no_block_mode": null, "lines" : true, "plugin": {"type": ["__all__"], "command": "bh_modules.bracketselect", "args": {"select": "right"} } } },
+	
+	// Select text between/including brackets
+	{"keys": ["super+s"], "command": "bh_key", "no_outside_adj": null, "args": {"lines" : true, "plugin": {"type": ["__all__"], "command": "bh_modules.bracketselect"} } },
+	{"keys": ["super+shift+s"], "command": "bh_key", "args": {"no_outside_adj": null, "lines" : true, "plugin": {"type": ["__all__"], "command": "bh_modules.bracketselect", "args": {"always_include_brackets": true} } } },
+	
+	// HTML
+	// Select tag name of HTML/XML tag (both opening name and closing)
+	{"keys": ["super+alt+s"], "command": "bh_key", "args": {"plugin": {"type": ["cfml", "html", "angle"], "command": "bh_modules.tagnameselect"} } },
+	
+	// Select the attribute to the left/right of the cursor (will wrap inside the tag)
+	// {"keys": ["super+alt+left"], "command": "bh_key", "args": {"plugin": {"type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": {"direction": "left"} } } },
+	// {"keys": ["super+alt+right"], "command": "bh_key", "args": {"plugin": {"type": ["cfml", "html", "angle"], "command": "bh_modules.tagattrselect", "args": {"direction": "right"} } } },
+	
+	
+	
+	// ******************************
+	// *********** EMMET ************
+	// ******************************
+	{"keys": ["super+w"], "command": "wrap_as_you_type", "context": [{"operand": false, "operator": "equal", "match_all": true, "key": "setting.is_widget"}, {"match_all": true, "key": "emmet_action_enabled.wrap_as_you_type"} ] },
+	{"keys": ["super+alt+w"], "args": {"action": "remove_tag"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.remove_tag"} ] },
+	
+	{"keys": ["super+up"], "args": {"action": "increment_number_by_1"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.increment_number_by_1"} ] },
+	{"keys": ["super+down"], "args": {"action": "decrement_number_by_1"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.decrement_number_by_1"} ] },
+	{"keys": ["super+shift+up"], "args": {"action": "increment_number_by_10"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.increment_number_by_10"} ] },
+	{"keys": ["super+shift+down"], "args": {"action": "decrement_number_by_10"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.decrement_number_by_10"} ] },
+	{"keys": ["super+alt+down"], "args": {"action": "decrement_number_by_01"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.decrement_number_by_01"} ] },
+	{"keys": ["super+alt+up"], "args": {"action": "increment_number_by_01"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.increment_number_by_01"} ] },
+	
+	{"keys": ["super+e"], "args": {"action": "expand_abbreviation"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.expand_abbreviation"} ] },
+	{"keys": ["super+alt+e"], "command": "expand_as_you_type", "context": [{"operand": false, "operator": "equal", "match_all": true, "key": "setting.is_widget"}, {"match_all": true, "key": "emmet_action_enabled.expand_as_you_type"} ] },
+	{"keys": ["super+ctrl+e"], "command": "update_as_you_type", "context": [{"operand": false, "operator": "equal", "match_all": true, "key": "setting.is_widget"}, {"match_all": true, "key": "emmet_action_enabled.update_as_you_type"} ] },
+	
+	{"keys": ["super+m"], "args": {"action": "matching_pair"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.matching_pair"} ] },
+	{"keys": ["super+alt+left"], "args": {"action": "select_previous_item"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.select_previous_item"} ] },
+	{"keys": ["super+alt+right"], "args": {"action": "select_next_item"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.select_next_item"} ] },
+	{"keys": ["super+ctrl+left"], "args": {"action": "prev_edit_point"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.prev_edit_point"} ] },
+	{"keys": ["super+ctrl+right"], "args": {"action": "next_edit_point"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.next_edit_point"} ] },
+	{"keys": ["super+j"], "args": {"action": "split_join_tag"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.split_join_tag"} ] },
+	
+	
+	// Restore after Emmet crapping out my favourite keys!
+	{ "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["ctrl+alt+shift+'"], "command": "change_quotes" },
+	{ "keys": ["ctrl+]"], "command": "indent" },
+	{ "keys": ["ctrl+["], "command": "unindent" },
+	
+	// ******************************
+	// ********* VINTAGEOUS *********
+	// ******************************
 	{ "keys": ["ctrl+k", "ctrl+o"], "command": "toggle_vintageous" }
-]
+	]

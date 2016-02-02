@@ -1,7 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/Sunburst (SL).tmTheme",
+	"color_scheme": "Packages/User/Sunburst (SL) (SublimePythonIDE).tmTheme",
 	"drag_text": true,
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
@@ -11,18 +11,18 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Batch File",
+		"C++",
+		"Color Highlighter",
+		"CSS",
 		"JavaScript",
+		"Perl",
+		"PHP",
 		"Python",
 		"Vintage",
-		"Batch File",
-		"Emmet",
-		"Color Highlighter",
-		"PHP",
-		"C++",
-		"CSS",
-		"Perl",
 		"Vintageous"
 	],
+	"show_encoding": true,
 	"trim_automatic_white_space": false,
 	"word_wrap": false
 }
