@@ -6,7 +6,7 @@
         "children":
         [
             { "command": "prompt_open_project_or_workspace", "caption": "Open Project…" },
-            { "command": "prompt_switch_project_or_workspace", "caption": "Switch Project…" },
+            
             { "command": "prompt_select_workspace", "caption": "Quick Switch Project…", "mnemonic": "S" },
             {
                 "caption": "Open Recent",

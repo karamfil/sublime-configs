@@ -97,8 +97,10 @@
 	{ "keys": ["ctrl+]"], "command": "indent" },
 	{ "keys": ["ctrl+["], "command": "unindent" },
 	
+	// Restore after Plugin crapping out my favourite keys!
+	
 	// ******************************
 	// ********* VINTAGEOUS *********
 	// ******************************
 	{ "keys": ["ctrl+k", "ctrl+o"], "command": "toggle_vintageous" }
-	]
+]
