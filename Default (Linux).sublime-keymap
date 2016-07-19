@@ -6,6 +6,7 @@
 	
 	{ "keys": ["alt+l", "alt+l"]	, "command": "insert_snippet", "args": {"contents": "console.log(${SELECTION}$0);"}		, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	{ "keys": ["alt+l", "alt+i"]	, "command": "insert_snippet", "args": {"contents": "console.info(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
+	{ "keys": ["alt+l", "alt+e"]	, "command": "insert_snippet", "args": {"contents": "console.error(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	{ "keys": ["alt+l", "alt+w"]	, "command": "insert_snippet", "args": {"contents": "console.warn(${SELECTION}$0);"}	, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	{ "keys": ["alt+l", "alt+t"]	, "command": "insert_snippet", "args": {"contents": "console.trace();"}					, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},
 	{ "keys": ["alt+l", "alt+a"]	, "command": "insert_snippet", "args": {"contents": "alert(${SELECTION}$0);"}			, "context": [{ "key": "selector", "operator": "equal", "operand": "source.js" }]},

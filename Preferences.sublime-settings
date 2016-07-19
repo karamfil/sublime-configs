@@ -9,7 +9,8 @@
 	[
 		"*.scssc",
 		"*.map",
-		"*.bundle.js"
+		"*.bundle.js",
+		"*.pyc"
 	],
 	"folder_exclude_patterns":
 	[
